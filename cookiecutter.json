@@ -1,0 +1,14 @@
+{
+    "repo_name": "Project name",
+
+    "author_names": "Author names",
+    "author_names_running": "Author names running",
+    "author_institutions": "Author institutions",
+
+    "article_title": "Article title",
+    "article_title_running": "Article title running",
+    "_copy_without_render": [
+        "*.cls",
+        "*.bst"
+    ]
+}
