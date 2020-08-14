@@ -80,26 +80,10 @@ def test_generate_project() -> None:
         TESTS_ROOT / EXTRA_CONTEXT['repo_name']
     ).resolve()
     process = subprocess.Popen(
-        ['pdflatex', 'main.tex'],
+        ['make'],
         cwd=folder_path
     )
     process.wait()
-    process = subprocess.Popen(
-        ['bibtex', 'main.aux'],
-        cwd=folder_path
-    )
-    process.wait()
-    process = subprocess.Popen(
-        ['pdflatex', 'main.tex'],
-        cwd=folder_path
-    )
-    process.wait()
-    process = subprocess.Popen(
-        ['pdflatex', 'main.tex'],
-        cwd=folder_path
-    )
-    process.wait()
-
     assert (
         TESTS_ROOT / EXTRA_CONTEXT['repo_name'] / 'main.pdf'
     ).exists()
